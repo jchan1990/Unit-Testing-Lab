@@ -9,21 +9,25 @@ public class Zoo {
     //Definition of the list to hold the animals
     private static ArrayList<Animal> animals;
 
-    private Zoo(){
+    private Zoo() {
         animals = new ArrayList<>();
     }
 
-    public static Zoo getInstance(){
-        if(zoo == null)
+    public static Zoo getInstance() {
+        if (zoo == null)
             zoo = new Zoo();
         return zoo;
     }
 
-    public void addAnimal(Animal animal){
+    public void addAnimal(Animal animal) {
         animals.add(animal);
     }
 
-    public ArrayList<Animal> getAnimals(){
+    public ArrayList<Animal> getAnimals() {
         return animals;
+    }
+
+    public void removeAnimal(Animal animal) {
+        animals.remove(animal);
     }
 }
